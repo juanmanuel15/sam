@@ -4,9 +4,21 @@
   <title>Semana Acádemica Multidiciplinaria</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <style>
+	.row_inicial {
+		height: 50px;
+	}
+
+	img {
+		display:block;
+		margin:auto;
+	}
+
+</style>	
 </head>
 <body>
 
@@ -18,7 +30,7 @@
 		<div class="" id="navbarNav">
 		    <ul class="navbar-nav">
 			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="#">Inicio</a>
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="cursos.php">Cursos</a>
@@ -33,9 +45,9 @@
 	 	 </div>
 	</nav>
 
-	<div class="container-fluid ">
-		<div class="row row-1">
-			<div class="col-12 mb-2 mt-8">
+	<div class="container">
+		<div class="row">
+			<div class="col block-center row_inicial mt-3">
 				<img src="img/SAM.jpg" alt="">
 			</div>
 		</div>
