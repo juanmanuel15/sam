@@ -1,0 +1,110 @@
+main{
+    height: 100vh;
+    display: grid;
+    grid-row-gap: 5px; /* Medida entre lineas del los div*/
+    grid-column-gap:5px;
+    grid-template-rows: 30% auto auto 10px;
+    
+    }
+
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+div ul li {
+    float: left;
+}
+
+form {
+    width: 25%;
+    border:1px solid #ccc;
+    margin: 20px;
+    padding:20px;
+}
+
+label{
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    font-weight: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+     
+    margin-bottom: 10px;
+    width: 100%;
+    padding:5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+
+}
+
+input:focus {
+    border: 1px solid rgb(121,109,57);
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(65,84,62);
+    color: white;
+    cursor: pointer; 
+}
+
+img {
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: 80%;
+    margin-bottom: 0;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(121,109,57);
+}
+
+.active {
+    background-color: rgb(65,84,62);
+}
+.navegador {
+    top:0;
+    padding: 0;
+    margin-bottom: 0;
+}
