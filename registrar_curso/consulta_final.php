@@ -1,7 +1,8 @@
 <?php 
 
-	require 'datos.php';
+	require 'datos/datos_dos.php';
 	require 'funcion_consulta.php';
+
 
 
 	$con = mysqli_connect($host,$user,$password, $db);
