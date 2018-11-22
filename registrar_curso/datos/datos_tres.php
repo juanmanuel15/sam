@@ -19,13 +19,13 @@
 
 	#datos para la tabla requerimientos
 	$id_req_curso = "NULL";
-	$nombre_req = "Presente institucional";
+	$nombre_req = array ("Presente institucional", "Equipo de audio", "Computadora");
 
 	#datos para la tabla horario
 	$id_horario = "NULL";
-	$fecha = "2018-11-22";
-	$hora_inicial = "07:00:00";
-	$hora_final = "09:00:00";
+	$fecha = array ("2018-11-19", "2018-11-20", "2018-11-21", "2018-11-22", "2018-11-23");
+	$hora_inicial = array("07:00:00", "07:00:00", "07:00:00", "07:00:00", "07:00:00");
+	$hora_final = array("09:00:00", "09:00:00", "09:00:00", "09:00:00", "09:00:00"); 
 
 	#datos para la tabla lugar
 	$lugar = "Sala de computo 4";
