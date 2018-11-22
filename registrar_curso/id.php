@@ -13,4 +13,8 @@ date_default_timezone_set('America/Mexico_City');
 
 		return $cadena;
 	}
+
+	function id_horario (){
+		return $cadena = date("d").date("m").date("y");
+	}
 ?>
