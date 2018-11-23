@@ -53,18 +53,19 @@
 			 }
 
 			 	$insertar = "INSERT INTO req_curso (id, id_req, id_curso) VALUES ";
-			 $i =0;
+			 $i = 0;
+
 			 while ($i < count($id_array)){
 
 			 	if($i == count($id_array)-1){
 			 		$insertar .= "(NULL, ";
-				 	$insertar .= $id_array[$i] . ", ";
+				 	$insertar .= $id_array[$i] . " , ";
 				 	$insertar .= " '$id_curso' ". ")";
 
 			 	} else {
 			 		$insertar .= "(NULL, ";
-			 	$insertar .= $id_array[$i] . ", ";
-			 	$insertar .= "'$id_curso '". "),";
+			 	$insertar .= $id_array[$i] . " , ";
+			 	$insertar .= "'$id_curso'". ") , ";
 
 			 	}
 

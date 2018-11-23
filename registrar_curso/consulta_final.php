@@ -1,6 +1,6 @@
 <?php 
 
-	require 'datos/datos_dos.php';
+	require 'datos/datos.php';
 	require 'funcion_consulta.php';
 
 

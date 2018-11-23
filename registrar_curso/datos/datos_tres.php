@@ -14,8 +14,8 @@
 
 	#datos para tabla material 
 	$id_mat="NULL";
-	$nombre_material = "Display 7 segmenetos";
-	$cantidad = 4;
+	$nombre_material = ["Display 7 segmenetos", 'LED', 'programador'];
+	$cantidad = [4,10,1];
 
 	#datos para la tabla requerimientos
 	$id_req_curso = "NULL";

@@ -1,6 +1,6 @@
 <?php
 	
-	require 'id.php';
+	require '../id.php';
 		
 	#Datos de la base	
 	$host = "localhost";
@@ -23,12 +23,12 @@
 
 	#datos para la tabla horario
 	$id_horario = "NULL";
-	$fecha = "2018-11-22";
-	$hora_inicial = "07:00:00";
-	$hora_final = "09:00:00";
+	$fecha = ["2018-11-22", "2018-11-23", "2018-11-24", "2018-11-25", ];
+	$hora_inicial = ["07:00:00","07:00:00","07:00:00","07:00:00" ];
+	$hora_final = ["09:00:00","09:00:00", "09:00:00", "09:00:00"];
 
 	#datos para la tabla lugar
-	$lugar = "Sala de computo 4";
+	$lugar = ["Sala de computo 4", "Sala de computo 2", "Sala de computo 1", "Sala de computo 1","Sala de computo 1"];
 	
 
 	#datos para la tabla curso

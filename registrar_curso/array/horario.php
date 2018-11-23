@@ -1,6 +1,6 @@
 <?php
 	
-	require '../datos.php';
+	require '../datos/datos_uno.php';
 	require 'funcion_horario.php';
 	//include '../id.php';
 
