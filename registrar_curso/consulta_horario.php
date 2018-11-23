@@ -5,7 +5,7 @@
 	$db = "sam";
 
 	$id_curso = 2;
-	$fecha = "2018-11-22";
+	$fecha =  array();
 	$hora_inicial = "07:00:00";
 	$hora_final = "09:00:00";
 

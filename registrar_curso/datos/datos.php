@@ -19,7 +19,7 @@
 
 	#datos para la tabla requerimientos
 	$id_req_curso = "NULL";
-	$nombre_req = "Presente institucional";
+	$nombre_req = ["Presente institucional", "Equipo de audio", "Computadora", "ASDHJASD"];
 
 	#datos para la tabla horario
 	$id_horario = "NULL";
