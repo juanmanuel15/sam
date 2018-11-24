@@ -16,8 +16,7 @@
 			$nombre_req = array_values($nombre_req);
 			$id_array = array();
 			$req_array = array();
-			$id_curso;
-			//print_r($nombre_req);
+
 			$query ="";
 			$size_req = count($nombre_req);
 
@@ -69,13 +68,10 @@
 
 			 	}
 
-			 	
-
 			 	$i++;
 			 	
-
-			 	
 			 }
+
 			 $insertar .= ";";
 
 
@@ -83,19 +79,6 @@
 
 
 			 
-
-			
-
-
-
-
-
-				
-					
-
-
-			
-				
 
 			//echo $query;
 

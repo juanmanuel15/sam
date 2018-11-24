@@ -1,6 +1,6 @@
 <?php
 	
-	require '../id.php';
+	require 'id.php';
 		
 	#Datos de la base	
 	$host = "localhost";
@@ -19,11 +19,11 @@
 
 	#datos para la tabla requerimientos
 	$id_req_curso = "NULL";
-	$nombre_req = ["Presente institucional", "Equipo de audio", "Computadora", "ASDHJASD"];
+	$nombre_req = "Presente institucional";
 
 	#datos para la tabla horario
 	$id_horario = "NULL";
-	//$fecha = "2018-11-22";
+	$fecha = "2018-11-22";
 	$hora_inicial = "07:00:00";
 	$hora_final = "09:00:00";
 

@@ -5,7 +5,7 @@
 	//include '../id.php';
 
 	$id_curso;
-
+	$id_horario = array();
 	$conn = mysqli_connect($host,$user, $password, $db);
 
 	if (!$conn) {
@@ -15,9 +15,17 @@
 
 	$query = "SELECT id_horario FROM horario WHERE id_curso = '$id_curso'";
 
-	$id_horario = mysqli_query($conn, $query);
+	$result = mysqli_query($conn, $query);
 
-	$id_horario = mysqli_fetch_array($id_horario);
+	#Almacenar los datos en la consulta 
+
+	foreach ($result as $key )
+		array_push($id_horario, $key ['id_horario']);
+
+	
+
+
+	/*print_r($id_horario = array_values(mysqli_fetch_array($id_horario)));
 
 	if(is_array($id_horario)){
 
@@ -41,17 +49,12 @@
 			
 			for ($i=0; $i <count($lugar) ; $i++) {
 
-			//print_r($consulta);
-
+			
 				$result = mysqli_fetch_array(mysqli_query($conn, $consulta[$i]));
 				array_push($id_lugar, $result['id_lugar']);
 
 				
 			}
-
-
-			#print_r($id_lugar);*/
-
 
 
 			$id_curso = "SELECT id_horario FROM horario WHERE id_curso = '$id_curso'";
@@ -145,8 +148,8 @@
 
 	
 	}
-}
-}
+/*}
+}*/
 
 	 //consultaHorario();
 
