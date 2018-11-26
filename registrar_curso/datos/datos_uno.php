@@ -2,8 +2,6 @@
 	
 	require 'id.php';
 		
-	
-
 	#datos para tabla grupo_invitado
 	$nombre_grupo_invitado = "LIA2";
 	$id_grupo= "NULL";
@@ -51,18 +49,15 @@
 
 	#datos para el ORG
 
-	$nCuentaOrg = [1730709, 1730707,1730708];
-
-
+	$nCuentaOrg = [1730711, 1730710,1730707];
 
 	#datos para el resp
 
-	$nCuentaResp = [1830711, 1830710];
-
+	$nCuentaResp = [1730709];
 
 	#datos para el inscrito
 
-	$nCuentaInsc = 1830712;
+	$nCuentaInsc = 1730708;
 
 	
 

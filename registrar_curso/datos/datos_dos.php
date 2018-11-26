@@ -2,15 +2,9 @@
 	
 	require 'id.php';
 		
-	#Datos de la base	
-	$host = "localhost";
-	$user = "root";
-	$password = "";
-	$db = "sam";	
-
 	#datos para la tabla curso
 	
-	$titulo = "Arduino básico";
+	$titulo = "Arduino basico";
 	$id_curso= valorID($titulo);
 	$tipoActividad = "Taller";
 	$desc = "En este taller aprenderás los principales conceptos de Arduino";
@@ -53,6 +47,19 @@
 	$tel = 5571438433;
 
 	$id_usu = "NULL";
+
+
+	#datos para el ORG
+
+	$nCuentaOrg = [1730709, 1730707,1730708];
+
+	#datos para el resp
+
+	$nCuentaResp = [1830711, 1830710];
+
+	#datos para el inscrito
+
+	$nCuentaInsc = 1830712;
 	
 
 

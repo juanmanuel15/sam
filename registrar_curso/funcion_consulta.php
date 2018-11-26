@@ -1,11 +1,8 @@
 <?php
 
-
-
 	function seleccionar ($conn,$query,$campo){
 
 		$res = mysqli_query($conn, $query);
-
 
 		if(mysqli_num_rows($res) === 1 ) {
 			while($fila = mysqli_fetch_array($res)) 
@@ -29,7 +26,7 @@
 			return false;
 
 	}
-
+ 
 	
 
 

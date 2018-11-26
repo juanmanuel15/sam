@@ -43,7 +43,7 @@
 			
 		} else {
 
-			$insertar .= "(NULL, '$nombre_material', '$hora_inicial', '$cantidad', '$id_curso')";
+			$insertar .= "(NULL, '$nombre_material', '$cantidad', '$id_curso')";
 
 
 		}
@@ -157,13 +157,18 @@
 
 	} else {
 
-		$query = "SELECT id_req FROM requerimientos WHERE 'nombre_req' =  '$nombre_req'";
+		$query = "SELECT id_req FROM requerimientos WHERE nombre_req =  '$nombre_req'";
+
 
 		$id_req = seleccionar($conn, $query, "id_req");
+
+		
 
 		$insertar = "INSERT INTO req_curso (id, id_req, id_curso) VALUES (NULL, $id_req, '$id_curso' )" ;
 
 	}
+
+	
 
 	return mysqli_query($conn, $insertar);
 }
@@ -283,12 +288,13 @@
 
 	function horarioLugar($id_curso, $lugar, $conn){
 
+
 		if(is_array($lugar)){
+
 
 			$query = "SELECT id_horario FROM horario WHERE id_curso = '$id_curso'";
 
 			$id_horario = seleccionar($conn, $query, 'id_horario');
-			#$result = mysqli_query($conn, $query);
 
 			$consulta = [];
 			$id_lugar = [];
@@ -338,8 +344,13 @@
 
 			$id_lugar = seleccionar($conn, $query, 'id_lugar');
 
+			
 			$insertar = "INSERT INTO horario_lugar (id, id_lugar, id_horario) VALUES (NULL, $id_lugar, $id_horario)";
+
+			
 		}
+
+
 
 		return insertar($conn, $insertar);
 		
@@ -373,35 +384,45 @@
 
 			$nCuenta = seleccionar($conn, $query, 'nCuenta');
 
+			if(is_array($nCuenta)){
 
-		$insertar =  "INSERT INTO curso_usuario_org (id, nCuenta, id_curso) VALUES ";
+				$insertar =  "INSERT INTO curso_usuario_org (id, nCuenta, id_curso) VALUES ";
 
-			$i = 0;
+				$i = 0;
 
 			
-			 while ($i < count($nCuenta)){
-
-			 	if($i == count($nCuenta)-1){
-			 		$insertar .= "(NULL, ";
-				 	$insertar .= $nCuenta[$i] . " , ";
-				 	$insertar .= "'$id_curso'". ")";
+			 	while ($i < count($nCuenta)){
 
 
-			 	} else {
-			 		$insertar .= "(NULL, ";
-			 		$insertar .= $nCuenta[$i] . " , ";
-				 	$insertar .= "'$id_curso'". ") ,";
+			 		if($i == count($nCuenta)-1){
 
-			 	}
+				 		$insertar .= "(NULL, ";
+					 	$insertar .= $nCuenta[$i] . " , ";
+					 	$insertar .= "'$id_curso'". ")";
 
-			 	$i++;
-			 	
+
+			 		} else {
+
+				 		$insertar .= "(NULL, ";
+				 		$insertar .= $nCuenta[$i] . " , ";
+					 	$insertar .= "'$id_curso'". ") ,";
+
+				 	}
+
+				 	$i++;			 	
 			 }				
 
 		} else {
 
-			$insertar = "INSERT INTO curso_usuario_org (id, nCuenta, id_curso) VALUES (NULL, $nCuenta, '$id_curso' )";
+			$insertar = "INSERT INTO curso_usuario_org(id, nCuenta, id_curso) VALUES (NULL, $nCuenta, '$id_curso' )";
 		}
+
+			} else {
+
+				$insertar = "INSERT INTO curso_usuario_org(id, nCuenta, id_curso) VALUES (NULL, $nCuenta, '$id_curso' )";
+
+			}
+
 
 		return  insertar($conn, $insertar);
 
@@ -409,6 +430,7 @@
 
 
 	function usuarioResp($nCuentaResp, $id_curso, $conn){
+
 
 		if(is_array($nCuentaResp)){
 
@@ -434,35 +456,45 @@
 
 			$nCuenta = seleccionar($conn, $query, 'nCuenta');
 
+			if(is_array($nCuenta)){
 
-		$insertar =  "INSERT INTO curso_usuario_resp (id, nCuenta, id_curso) VALUES ";
+				$insertar =  "INSERT INTO curso_usuario_resp (id, nCuenta, id_curso) VALUES ";
 
-			$i = 0;
+				$i = 0;
 
 			
-			 while ($i < count($nCuenta)){
-
-			 	if($i == count($nCuenta)-1){
-			 		$insertar .= "(NULL, ";
-				 	$insertar .= $nCuenta[$i] . " , ";
-				 	$insertar .= "'$id_curso'". ")";
+			 	while ($i < count($nCuenta)){
 
 
-			 	} else {
-			 		$insertar .= "(NULL, ";
-			 		$insertar .= $nCuenta[$i] . " , ";
-				 	$insertar .= "'$id_curso'". ") ,";
+			 		if($i == count($nCuenta)-1){
 
-			 	}
+				 		$insertar .= "(NULL, ";
+					 	$insertar .= $nCuenta[$i] . " , ";
+					 	$insertar .= "'$id_curso'". ")";
 
-			 	$i++;
-			 	
-			 }				
+
+			 		} else {
+
+				 		$insertar .= "(NULL, ";
+				 		$insertar .= $nCuenta[$i] . " , ";
+					 	$insertar .= "'$id_curso'". ") ,";
+
+				 	}
+
+				 	$i++;			 	
+			 }					 	
 
 		} else {
 
 			$insertar = "INSERT INTO curso_usuario_resp(id, nCuenta, id_curso) VALUES (NULL, $nCuenta, '$id_curso' )";
 		}
+
+			} else {
+
+				$insertar = "INSERT INTO curso_usuario_resp(id, nCuenta, id_curso) VALUES (NULL, $nCuenta, '$id_curso' )";
+
+			}
+
 
 		return  insertar($conn, $insertar);
 
@@ -470,6 +502,7 @@
 
 
 	function usuarioInsc($nCuentaInsc, $id_curso, $conn){
+
 
 		$query = "SELECT nCuenta FROM usuario WHERE nCuenta = $nCuentaInsc";
 

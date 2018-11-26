@@ -2,14 +2,8 @@
 	
 	require 'id.php';
 		
-	#Datos de la base	
-	$host = "localhost";
-	$user = "root";
-	$password = "";
-	$db = "sam";	
-
 	#datos para tabla grupo_invitado
-	$nombre_grupo_invitado = "LIA2";
+	$nombre_grupo_invitado = "ICO5";
 	$id_grupo= "NULL";
 
 	#datos para tabla material 
@@ -28,12 +22,12 @@
 	$hora_final = array("09:00:00", "09:00:00", "09:00:00", "09:00:00", "09:00:00"); 
 
 	#datos para la tabla lugar
-	$lugar = "Sala de computo 4";
+	$lugar = array ("Sala de computo 4", "Sala de computo 4", "Sala de computo 4", "Sala de computo 4", "Sala de computo 4");
 	
 
 	#datos para la tabla curso
 	
-	$titulo = "Java para principiantes";
+	$titulo = "PHP para principantes";
 	$id_curso= valorID($titulo);
 	$tipoActividad = "taller";
 	$desc = "En este taller aprenderás los principales conceptos";
@@ -53,6 +47,17 @@
 	$id_usu = "NULL";
 	
 
+	#datos para el ORG
+
+	$nCuentaOrg = [1730711];
+
+	#datos para el resp
+
+	$nCuentaResp = [1730709];
+
+	#datos para el inscrito
+
+	$nCuentaInsc = 1730707;
 
 
 
