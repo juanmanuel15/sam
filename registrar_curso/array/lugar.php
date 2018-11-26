@@ -22,8 +22,49 @@
 	foreach ($result as $key )
 		array_push($id_horario, $key ['id_horario']);
 
-	
+	$lugar;
+	$id_lugar= array();
 
+	
+	$consulta = array();
+	
+	for ($i=0; $i <count($fecha) ; $i++) {
+
+		array_push($consulta , "SELECT id_lugar FROM lugar WHERE nombre_lugar = '$lugar[$i]'");
+			 	
+			}
+	$res =[];
+		
+	//print_r($res = mysqli_fetch_array(mysqli_query($conn, $consulta[4])));
+		for($i=0; $i<count($lugar); $i++)
+			array_push($res,mysqli_fetch_array(mysqli_query($conn, $consulta[$i])));
+			
+	foreach ($res as $key ) 
+		array_push($id_lugar,$key['id_lugar']);
+
+	$insertar = "INSERT INTO horario_lugar (id, id_lugar, id_horario) VALUES ";
+
+			 $i = 0;
+
+			 while ($i < count($id_lugar) && $i <count($id_horario)){
+
+			 	if($i == count($id_lugar)-1){
+			 		$insertar .= "(NULL, ";
+				 	$insertar .= $id_lugar[$i] . " , ";
+				 	$insertar .= $id_horario[$i]. ")";
+
+
+			 	} else {
+			 		$insertar .= "(NULL, ";
+			 	$insertar .= $id_lugar[$i] . " , ";
+				 	$insertar .= $id_horario[$i]. ") ,";
+
+			 	}
+
+			 	$i++;
+			 	
+			 }
+		print_r($insertar);
 
 	/*print_r($id_horario = array_values(mysqli_fetch_array($id_horario)));
 
