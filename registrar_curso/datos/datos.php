@@ -1,56 +1,64 @@
 <?php
 	
-	require 'id.php';
-		
-	#Datos de la base	
+	date_default_timezone_set('America/Mexico_City');
+
 	$host = "localhost";
 	$user = "root";
 	$password = "";
-	$db = "sam";	
+	$db = "sam";
 
-	#datos para tabla grupo_invitado
-	$nombre_grupo_invitado = "LIA2";
-	$id_grupo= "NULL";
+		
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-	#datos para tabla material 
-	$id_mat="NULL";
-	$nombre_material = "Display 7 segmenetos";
-	$cantidad = 4;
+		 $titulo = $_POST['titulo'] ;
+		 $tipoActividad = $_POST['tipo_actividad'];	 
+		 $desc = $_POST['desc'];
+		 $pre = $_POST['pre']; 
+		 $dirigido = $_POST['dirigido'];
+		 $material = $_POST['material'];
+		 $grupo_invitado = $_POST['grupo_invitado'];
+		 $cantidad = $_POST['cantidad'];
+		 $req = $_POST['req'];
 
-	#datos para la tabla requerimientos
-	$id_req_curso = "NULL";
-	$nombre_req = "Presente institucional";
+		 $horarioI1 = $_POST['horarioI1'];
+		 $horarioI2 = $_POST['horarioI2'];
+		 $horarioI3 = $_POST['horarioI3'];
+		 $horarioI4 = $_POST['horarioI4'];
+		 $horarioI5 = $_POST['horarioI5'];
 
-	#datos para la tabla horario
-	$id_horario = "NULL";
-	$fecha = "2018-11-22";
-	$hora_inicial = "07:00:00";
-	$hora_final = "09:00:00";
+		print_r($hora_inicial = [$horarioI1, $horarioI2, $horarioI3, $horarioI4, $horarioI5]);
 
-	#datos para la tabla lugar
-	$lugar = "Sala de computo 4";
-	
+		 $horarioF1 = $_POST['horarioF1'];
+		 $horarioF2 = $_POST['horarioF2'];
+		 $horarioF3 = $_POST['horarioF3'];
+		 $horarioF4 = $_POST['horarioF4'];
+		 $horarioF5 = $_POST['horarioF5'];
 
-	#datos para la tabla curso
-	
-	$titulo = "Java para principiantes";
-	$id_curso= valorID($titulo);
-	$tipoActividad = "taller";
-	$desc = "En este taller aprenderás los principales conceptos";
-	$pre = "Programación estructurada, lineal.";
-	$dirigido ="Estudiantes que aún no saben nada de POO";
+		$hora_final = [$horarioF1, $horarioF2, $horarioF3, $horarioF4, $horarioF5];
 
-	#datos para el tabla usuario
-	$id = 1730711;
-	$nombre="Juan Manuel";
-	$apellidoP = "Hernández";
-	$apellidoM = "Contreras";
-	$email = "juanmanuelhern158@gmail.com";
-	$usu = "jmhc1508";
-	$pass = "juan.manuel";
-	$tel = 5557157932;
+		$lugar1 = $_POST['lugar1'];
+		$lugar2 = $_POST['lugar2'];
+		$lugar3 = $_POST['lugar3'];
+		$lugar4 = $_POST['lugar4'];
+		$lugar5 = $_POST['lugar5'];
 
-	$id_usu = "NULL";
+		$lugar = [$lugar1, $lugar2, $lugar3, $lugar4, $lugar5];
+
+		 $nCuentaOrg = $_POST['nCuentaOrg'];
+		$nCuentaRes = $_POST['nCuentaRes'];
+
+		 $id_curso = valorID($titulo);
+		
+	}
+
+
+
+	function valorID($cadena){
+		$cadena = substr(strtolower(str_ireplace(" ", "", $cadena)),0,9).date("d").date("m").date("y");
+
+		return $cadena;
+	}
+
 	
 
 

@@ -4,7 +4,7 @@
 	//require 'datos/datos_uno.php';
 	//require 'datos/datos_dos.php';
 	//require 'datos/datos_tres.php';
-	require 'datos/datos_cuatro.php';
+	//require 'datos/datos_cuatro.php';
 
 	#Datos de la base	
 	$host = "localhost";
