@@ -1,3 +1,6 @@
+<?php require 'datos/formulario_datos.php'
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +19,36 @@
 		Materiales: <input type="text" name="material" id="material" >
 		Cantidad: <input type="number" name="cantidad" id=""><br>
 		Grupo Invitado: <input type="text" name="grupo_invitado" id="grupo_invitado"><br>
-		Requerimientos : <input type="text" name="req" id="req"><br>
+		Requerimientos : 
+		<select name="lugar1">
+			<?php foreach ($res_req as $key){
+			echo "<option value=". $key['nombre_req'] .">" . $key['nombre_req']. "</option>";
+		}
+			?>
+		</select><br>
 
-		fecha 1: <input type="date"  name="fecha1">  Hora Inicio: <input type="time"  name="horarioI1">  Hora Final: <input type="time"  name="horarioF1"> Lugar: <input type="text"  name="lugar1"> <br>
+		fecha 1: <input type="date"  name="fecha1">  Hora Inicio: <input type="time"  name="horarioI1">  Hora Final: <input type="time"  name="horarioF1"> 
+		Lugar: <select name="lugar1">
+			<?php foreach ($res_lugar as $key){
+			echo "<option value=". $key['nombre_lugar'] .">" . $key['nombre_lugar']. "</option>";
+		}
+			?>
+		</select><br>
 
-		fecha 2: <input type="date"  name="fecha2">  Hora Inicio: <input type="time"  name="horarioI2">  Hora Final: <input type="time"  name="horarioF2"> Lugar: <input type="text"  name="lugar2"> <br>
+		fecha 2: <input type="date"  name="fecha2">  Hora Inicio: <input type="time"  name="horarioI2">  Hora Final: <input type="time"  name="horarioF2"> 
+		Lugar: <select name="lugar2"><?php foreach ($res_lugar as $key){echo "<option value=". $key['nombre_lugar'] .">" . $key['nombre_lugar']. "</option>";}
+			?></select><br>
 
-		fecha 3: <input type="date"  name="fecha3">  Hora Inicio: <input type="time"  name="horarioI3">  Hora Final: <input type="time"  name="horarioF3"> Lugar: <input type="text"  name="lugar3"> <br>
+		fecha 3: <input type="date"  name="fecha3">  Hora Inicio: <input type="time"  name="horarioI3">  Hora Final: <input type="time"  name="horarioF3"> 
+		Lugar: <select name="lugar3"><?php foreach ($res_lugar as $key){echo "<option value=". $key['nombre_lugar'] .">" . $key['nombre_lugar']. "</option>";}
+			?></select><br>
 
-		fecha 4: <input type="date"  name="fecha4">  Hora Inicio: <input type="time"  name="horarioI4">  Hora Final: <input type="time"  name="horarioF4"> Lugar: <input type="text"  name="lugar4"> <br>
+		fecha 4: <input type="date"  name="fecha4">  Hora Inicio: <input type="time"  name="horarioI4">  Hora Final: <input type="time"  name="horarioF4"> 
+		Lugar: <select name="lugar4"><?php foreach ($res_lugar as $key){echo "<option value=". $key['nombre_lugar'] .">" . $key['nombre_lugar']. "</option>";}
+			?></select><br>
 
-		fecha 5: <input type="date"  name="fecha5">  Hora Inicio: <input type="time"  name="horarioI5">  Hora Final: <input type="time"  name="horarioF5"> Lugar: <input type="text"  name="lugar5"> <br>
+		fecha 5: <input type="date"  name="fecha5">  Hora Inicio: <input type="time"  name="horarioI5">  Hora Final: <input type="time"  name="horarioF5"> Lugar: <select name="lugar5"><?php foreach ($res_lugar as $key){echo "<option value=". $key['nombre_lugar'] .">" . $key['nombre_lugar']. "</option>";}
+			?></select><br>
 
 		Organizador: <input type="text" name="nCuentaOrg"><br>
 		Responsable: <input type="text" name="nCuentaRes"><br>

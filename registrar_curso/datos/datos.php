@@ -15,10 +15,10 @@
 		 $desc = $_POST['desc'];
 		 $pre = $_POST['pre']; 
 		 $dirigido = $_POST['dirigido'];
-		 $material = $_POST['material'];
-		 $grupo_invitado = $_POST['grupo_invitado'];
+		 $nombre_material = $_POST['material'];
+		 $nombre_grupo_invitado = $_POST['grupo_invitado'];
 		 $cantidad = $_POST['cantidad'];
-		 $req = $_POST['req'];
+		 $nombre_req = $_POST['req'];
 
 		 $horarioI1 = $_POST['horarioI1'];
 		 $horarioI2 = $_POST['horarioI2'];
@@ -26,7 +26,7 @@
 		 $horarioI4 = $_POST['horarioI4'];
 		 $horarioI5 = $_POST['horarioI5'];
 
-		print_r($hora_inicial = [$horarioI1, $horarioI2, $horarioI3, $horarioI4, $horarioI5]);
+		$hora_inicial = [$horarioI1, $horarioI2, $horarioI3, $horarioI4, $horarioI5];
 
 		 $horarioF1 = $_POST['horarioF1'];
 		 $horarioF2 = $_POST['horarioF2'];
@@ -44,8 +44,16 @@
 
 		$lugar = [$lugar1, $lugar2, $lugar3, $lugar4, $lugar5];
 
-		 $nCuentaOrg = $_POST['nCuentaOrg'];
-		$nCuentaRes = $_POST['nCuentaRes'];
+		$fecha1 = $_POST['fecha1'];
+		$fecha2 = $_POST['fecha2'];
+		$fecha3 = $_POST['fecha3'];
+		$fecha4 = $_POST['fecha4'];
+		$fecha5 = $_POST['fecha5'];
+
+		$fecha = [$fecha1, $fecha2, $fecha3, $fecha4, $fecha5];
+
+		$nCuentaOrg = $_POST['nCuentaOrg'];
+		$nCuentaResp	 = $_POST['nCuentaRes'];
 
 		 $id_curso = valorID($titulo);
 		

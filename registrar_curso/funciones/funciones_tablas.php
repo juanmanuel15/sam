@@ -417,7 +417,7 @@
 
 			} else {
 
-				$insertar = "INSERT INTO curso_usuario_org(id, nCuenta, id_curso) VALUES (NULL, $nCuenta, '$id_curso' )";
+				$insertar = "INSERT INTO curso_usuario_org(id, nCuenta, id_curso) VALUES (NULL, $nCuentaOrg, '$id_curso' )";
 
 			}
 
@@ -489,7 +489,7 @@
 
 			} else {
 
-				$insertar = "INSERT INTO curso_usuario_resp(id, nCuenta, id_curso) VALUES (NULL, $nCuenta, '$id_curso' )";
+				$insertar = "INSERT INTO curso_usuario_resp(id, nCuenta, id_curso) VALUES (NULL, $nCuentaResp, '$id_curso' )";
 
 			}
 

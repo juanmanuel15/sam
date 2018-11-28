@@ -9,6 +9,7 @@
 		echo "Base no conectada";
 
 	else {
+		
 
 		if(!empty($titulo) OR !empty($tipoActividad) OR !empty($desc) OR !empty($pre) OR !empty($dirigido)){
 
@@ -29,6 +30,8 @@
 
 		}
 
+		
+
 		if (!empty($nombre_grupo_invitado)){
 
 			if (grupoInvitado($nombre_grupo_invitado, $id_curso, $conn))
@@ -46,24 +49,25 @@
 				echo "<li>Nombre_req Insertados</li>";
 			else
 				echo "<li>Nombre_req  no Insertados </li>";
-		}
+		} 
+		
+		
 
-		if(!empty($nombre_req)){
+		
+		if(horario($fecha, $hora_inicial, $hora_final, $id_curso,$conn))
+			echo "<li>Horario Insertado </li>";
+		else
+			echo "<li>Horario no Insertado </li>";
 
-			if(horario($fecha, $hora_inicial, $hora_final, $id_curso,$conn))
-				echo "<li>Horario Insertado </li>";
-			else
-				echo "<li>Horario no Insertado </li>";
-
-		}
-
+		
+		
 
 		if(horarioLugar($id_curso,$lugar, $conn))
 			echo "<li>Horario_lugar Insertado";
 		else 
 			echo "<li>Horario _lugar no Insertado </li>";
 
-
+		
 
 		if(usuarioOrg($nCuentaOrg, $id_curso, $conn))
 			echo "<li>Usuario_Org Insertado </li>";
@@ -75,13 +79,14 @@
 		else
 			echo "<li>Usuario_Resp no Insertado </li>";
 
+		/*
 		if(usuarioInsc($nCuentaInsc, $id_curso, $conn))
 			echo "<li>Usuario_Insc Insertado </li>";
 		else
 			echo "<li>Usuario_Insc no Insertado </li>";
 
 
-
+	*/
 	}
 
 		/*if(empty($titulo) or empty($tipoActividad) or empty($desc) or empty($pre) or empty($dirigido)){
