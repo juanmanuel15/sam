@@ -298,7 +298,7 @@
 			$id_lugar = [];
 
 			for ($i=0; $i <count($lugar) ; $i++) 
-				array_push($consulta , "SELECT id_lugar FROM lugar WHERE nombre_lugar = '$lugar[$i]'");			 		
+				array_push($consulta , "SELECT id_lugar FROM lugar WHERE id_lugar = '$lugar[$i]'");			 		
 
 			for($i=0; $i<count($lugar); $i++) 
 				array_push($id_lugar,seleccionar($conn, $consulta[$i], 'id_lugar'));

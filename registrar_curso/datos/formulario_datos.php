@@ -11,7 +11,7 @@
 
 	}else {
 
-		$query_lugar = "SELECT nombre_lugar FROM lugar";
+		$query_lugar = "SELECT * FROM lugar";
 		$res_lugar = mysqli_query($conn, $query_lugar);	
 
 		$query_req = "SELECT nombre_req FROM requerimientos";

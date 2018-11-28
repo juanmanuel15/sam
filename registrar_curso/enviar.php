@@ -61,14 +61,14 @@
 
 		
 		
-
+		print_r($lugar);
 		if(horarioLugar($id_curso,$lugar, $conn))
 			echo "<li>Horario_lugar Insertado";
 		else 
 			echo "<li>Horario _lugar no Insertado </li>";
 
 		
-
+		
 		if(usuarioOrg($nCuentaOrg, $id_curso, $conn))
 			echo "<li>Usuario_Org Insertado </li>";
 		else
