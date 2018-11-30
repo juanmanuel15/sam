@@ -23,6 +23,7 @@
    			 $("#agregarRequerimientos").click(function(){
         		$("#tablaReq").clone().appendTo("#requerimientos");
 		    });
+<<<<<<< HEAD
 
    			 $("#eliminarHorario").click(function(){
 				$("#tablaHorario").remove();
@@ -35,6 +36,8 @@
    			 $("#eliminarRequerimientos").click(function(){
 				$("#tablaReq").remove();
 			});
+=======
+>>>>>>> 82ef8dceb1ba2b6859c0f139e7f80e8b62b8df13
 			
 		});
 
@@ -58,7 +61,10 @@
 		<table border="2px" id="material">
 			
 			<label id="agregarMaterial">Agregar(+) </label>
+<<<<<<< HEAD
 			<label id="eliminarMaterial">Eliminar(-) </label>
+=======
+>>>>>>> 82ef8dceb1ba2b6859c0f139e7f80e8b62b8df13
 			
 			<tr>
 				<td><label>Nombre</label></td>
@@ -82,7 +88,10 @@
 		<table border="2px" id="requerimientos">
 			
 			<label id="agregarRequerimientos">Agregar(+) </label>
+<<<<<<< HEAD
 			<label id="eliminarRequerimientos">Eliminar(-) </label>
+=======
+>>>>>>> 82ef8dceb1ba2b6859c0f139e7f80e8b62b8df13
 			
 			<tr>
 				<td><label>Nombre</label></td>
@@ -100,7 +109,10 @@
 		<table border="2px" id="horario">
 			
 			<label id="agregarHorario">Agregar(+) </label>
+<<<<<<< HEAD
 			<label id="eliminarHorario">Eliminar(-) </label>
+=======
+>>>>>>> 82ef8dceb1ba2b6859c0f139e7f80e8b62b8df13
 			
 			<tr>
 				<td><label>Fecha</label></td>
