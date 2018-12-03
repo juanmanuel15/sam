@@ -19,38 +19,10 @@
 		 $nombre_grupo_invitado = $_POST['grupo_invitado'];
 		 $cantidad = $_POST['cantidad'];
 		 $nombre_req = $_POST['req'];
-
-		 $horarioI1 = $_POST['horarioI1'];
-		 $horarioI2 = $_POST['horarioI2'];
-		 $horarioI3 = $_POST['horarioI3'];
-		 $horarioI4 = $_POST['horarioI4'];
-		 $horarioI5 = $_POST['horarioI5'];
-
-		$hora_inicial = [$horarioI1, $horarioI2, $horarioI3, $horarioI4, $horarioI5];
-
-		 $horarioF1 = $_POST['horarioF1'];
-		 $horarioF2 = $_POST['horarioF2'];
-		 $horarioF3 = $_POST['horarioF3'];
-		 $horarioF4 = $_POST['horarioF4'];
-		 $horarioF5 = $_POST['horarioF5'];
-
-		$hora_final = [$horarioF1, $horarioF2, $horarioF3, $horarioF4, $horarioF5];
-
-		$lugar1 = $_POST['lugar1'];
-		$lugar2 = $_POST['lugar2'];
-		$lugar3 = $_POST['lugar3'];
-		$lugar4 = $_POST['lugar4'];
-		$lugar5 = $_POST['lugar5'];
-
-		$lugar = [$lugar1, $lugar2, $lugar3, $lugar4, $lugar5];
-
-		$fecha1 = $_POST['fecha1'];
-		$fecha2 = $_POST['fecha2'];
-		$fecha3 = $_POST['fecha3'];
-		$fecha4 = $_POST['fecha4'];
-		$fecha5 = $_POST['fecha5'];
-
-		$fecha = [$fecha1, $fecha2, $fecha3, $fecha4, $fecha5];
+		 $lugar = $_POST['lugar'];
+		 $fecha = $_POST['fecha'];
+		 $hora_inicial = $_POST['horarioI'];
+		 $hora_final = $_POST['horarioF'];
 
 		$nCuentaOrg = $_POST['nCuentaOrg'];
 		$nCuentaResp	 = $_POST['nCuentaRes'];

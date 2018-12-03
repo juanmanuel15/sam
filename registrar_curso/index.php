@@ -23,7 +23,6 @@
    			 $("#agregarRequerimientos").click(function(){
         		$("#tablaReq").clone().appendTo("#requerimientos");
 		    });
-<<<<<<< HEAD
 
    			 $("#eliminarHorario").click(function(){
 				$("#tablaHorario").remove();
@@ -36,8 +35,6 @@
    			 $("#eliminarRequerimientos").click(function(){
 				$("#tablaReq").remove();
 			});
-=======
->>>>>>> 82ef8dceb1ba2b6859c0f139e7f80e8b62b8df13
 			
 		});
 
@@ -58,13 +55,10 @@
 		
 		Material: 
 
-		<table border="2px" id="material">
+		<table border="1px" id="material">
 			
 			<label id="agregarMaterial">Agregar(+) </label>
-<<<<<<< HEAD
 			<label id="eliminarMaterial">Eliminar(-) </label>
-=======
->>>>>>> 82ef8dceb1ba2b6859c0f139e7f80e8b62b8df13
 			
 			<tr>
 				<td><label>Nombre</label></td>
@@ -85,20 +79,17 @@
 		
 		Requerimientos : 
 
-		<table border="2px" id="requerimientos">
+		<table border="1px" id="requerimientos">
 			
 			<label id="agregarRequerimientos">Agregar(+) </label>
-<<<<<<< HEAD
 			<label id="eliminarRequerimientos">Eliminar(-) </label>
-=======
->>>>>>> 82ef8dceb1ba2b6859c0f139e7f80e8b62b8df13
 			
 			<tr>
 				<td><label>Nombre</label></td>
 				
 			</tr>
 			<tr id="tablaReq">
-				<td><select name="req"><?php foreach ($res_req as $key){echo "<option value=". $key['nombre_req'] .">" . $key['nombre_req']. "</option>";}?></select></td>
+				<td><select name="req[]"><?php foreach ($res_req as $key){echo "<option value=". $key['nombre_req'] .">" . $key['nombre_req']. "</option>";}?></select></td>
 				
 			</tr>
 
@@ -106,13 +97,10 @@
 		
 		
 
-		<table border="2px" id="horario">
+		<table border="1px" id="horario">
 			
 			<label id="agregarHorario">Agregar(+) </label>
-<<<<<<< HEAD
 			<label id="eliminarHorario">Eliminar(-) </label>
-=======
->>>>>>> 82ef8dceb1ba2b6859c0f139e7f80e8b62b8df13
 			
 			<tr>
 				<td><label>Fecha</label></td>
