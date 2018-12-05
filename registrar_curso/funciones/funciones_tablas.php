@@ -5,7 +5,7 @@
 
 	function curso($conn, $id_curso, $titulo, $tipoActividad, $desc, $pre, $dirigido){
 
-		$query = "INSERT INTO curso(id_curso, titulo, tipo_actividad, descripcion, prerrequisitos, dirigido) VALUES ('$id_curso', '$titulo', '$tipoActividad', '$desc', '$pre', '$dirigido')";
+		$query = "INSERT INTO curso(id_curso, titulo, id_tipo_actividad, descripcion, prerrequisitos, dirigido) VALUES ('$id_curso', '$titulo', $tipoActividad, '$desc', '$pre', '$dirigido')";
 
 
 		return insertar($conn, $query);

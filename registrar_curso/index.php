@@ -1,4 +1,5 @@
-<?php require 'datos/formulario_datos.php'
+<?php require 'datos/formulario_datos.php';
+header("Content-Type: text/html;charset=utf-8");
 
 ?>
 <!DOCTYPE html>
@@ -11,28 +12,54 @@
 	<script>
 			
 		$(document).ready(function(){
-		
+			var i=1, j=1, k=1;
+
    			 $("#agregarHorario").click(function(){
-        		$("#tablaHorario").clone().appendTo("#horario");
+   			 	if(i<10){   			 		
+   			 		$("#tablaHorario").clone().appendTo("#horario");
+   			 		i++;
+   			 	}
+        		
 		    });
 
    			 $("#agregarMaterial").click(function(){
-        		$("#tablaMaterial").clone().appendTo("#material");
+   			 	if(j<5){
+   			 		$("#tablaMaterial").clone().appendTo("#material");
+   			 		j++;	
+   			 	}
+        		
 		    });
 
    			 $("#agregarRequerimientos").click(function(){
-        		$("#tablaReq").clone().appendTo("#requerimientos");
+        		if(k<5){
+        			$("#tablaReq").clone().appendTo("#requerimientos");
+        			k++;
+        		}
+        		
 		    });
+
    			 $("#eliminarHorario").click(function(){
-				$("#tablaHorario").remove();
+   			 	if(i>1){
+   			 		$("#tablaHorario").remove();
+   			 		i--;	
+   			 	}
+				
 			});
 
    			 $("#eliminarMaterial").click(function(){
-				$("#tablaMaterial").remove();
+   			 	if(j>1){
+   			 		$("#tablaMaterial").remove();
+   			 		j--;
+   			 	}
+				
 			});
 
    			 $("#eliminarRequerimientos").click(function(){
-				$("#tablaReq").remove();
+				if(k>1){
+					$("#tablaReq").remove();
+					k--;
+
+				}
 			});
 			
 		});
@@ -47,14 +74,14 @@
 	<form action="enviar.php" method="post">
 
 		Título: <input type="text" name="titulo" id="titulo"><br>
-		Tipo de actividad: <input type="text" name="tipo_actividad" id="tipo_actividad"><br>
+		Tipo de actividad: <select name="tipo_actividad"><?php foreach ($tipo_Actividad as $key){echo "<option value=". $key['id_tipo_actividad'] .">" . $key['nombre_tipo_actividad']. "</option>";}?></select>
 		Descripción: <input type="text" name="desc" id="desc"><br>
 		Prerrequisitos: <input type="text" name="pre" id="pre"><br>
 		Dirigido a : <input type="text" name="dirigido" id="dirigido"><br>
 		
 		Material: 
 
-		<table border="2px" id="material">
+		<table border="1px" id="material">
 			
 			<label id="agregarMaterial">Agregar(+) </label>
 			<label id="eliminarMaterial">Eliminar(-) </label>
@@ -78,27 +105,27 @@
 		
 		Requerimientos : 
 
-		<table border="2px" id="requerimientos">
+		<table border="1px" id="requerimientos">
 			
 			<label id="agregarRequerimientos">Agregar(+) </label>
-<
 			<label id="eliminarRequerimientos">Eliminar(-) </label>
-
 			
 			<tr>
 				<td><label>Nombre</label></td>
 				
 			</tr>
 			<tr id="tablaReq">
-				<td><select name="req"><?php foreach ($res_req as $key){echo "<option value=". $key['nombre_req'] .">" . $key['nombre_req']. "</option>";}?></select></td>
+				<td><select name="req[]"><?php foreach ($res_req as $key){echo "<option value=". $key['nombre_req'] .">" . $key['nombre_req']. "</option>";}?></select></td>
 				
 			</tr>
 
+		</table>
+
 
 		
 		
 
-		<table border="2px" id="horario">
+		<table border="1px" id="horario">
 			
 			<label id="agregarHorario">Agregar(+) </label>
 			<label id="eliminarHorario">Eliminar(-) </label>
