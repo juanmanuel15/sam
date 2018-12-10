@@ -72,7 +72,7 @@
 
 
 		$statement3 = $conexion->prepare("INSERT INTO usuario(id_cuenta,nombre,apellidoP,apellidoM,telefono,email,usuario,pass) VALUES ('$id','$nombre', '$apellidoP', '$apellidoM', '$tel', '$email','$usu','$pass' )");
-		$statement3->execute();
+		$statement3->execute();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 		
 		header('location: ingresar.php');
 

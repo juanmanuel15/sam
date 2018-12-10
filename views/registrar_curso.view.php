@@ -154,7 +154,7 @@ header("Content-Type: text/html;charset=utf-8");
 					<label class="col-form-label align-top">Descripción: </label>
 				</div>
 				<div class="col-2 block-center">
-					<textarea name="desc" id=""  rows="2"></textarea>
+					<textarea name="desc" id="desc"  rows="2"></textarea>
 				</div>
 				<div class="col-4"></div>
 			</div>
@@ -166,7 +166,7 @@ header("Content-Type: text/html;charset=utf-8");
 					<label class="col-form-label align-top">Prerrequisitos: </label>
 				</div>
 				<div class="col-2 block-center">
-					<textarea name="pre" id=""  rows="2"></textarea>
+					<textarea name="pre" id="pre"  rows="2"></textarea>
 				</div>
 				<div class="col-4"></div>
 			</div>
@@ -177,6 +177,16 @@ header("Content-Type: text/html;charset=utf-8");
 					<label class="col-form-label align-top">Grupo Invitado: </label>				</div>
 				<div class="col-2 block-center">
 					<input type="text" name="grupo_invitado" id="grupo_invitado">
+				</div>
+				<div class="col-4"></div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-3"></div>
+				<div class="col-2 text-right ">
+					<label class="col-form-label align-top">Organizador: </label>				</div>
+				<div class="col-2 block-center">
+					<input type="text" name="nCuentaOrg">
 				</div>
 				<div class="col-4"></div>
 			</div>
@@ -211,7 +221,7 @@ header("Content-Type: text/html;charset=utf-8");
 			</div>
 
 			<div class="row mt-2">
-				<div class="col-4"></div>
+				<div class="col-5"></div>
 				<div class="col-4 text-center ">
 					<table  id="material" class="table-sm table-bordered">
 						
@@ -228,10 +238,73 @@ header("Content-Type: text/html;charset=utf-8");
 
 					</table>
 				</div>
-				<div class="col-2"></div>
+				<div class="col-4"></div>
+			</div>
+
+			<div class="row mt-2">
+				<div class="col-4"></div>
+				<div class="col-4 text-center">	
+					<label class="col-form-label align-top">Horario </label> <i class="far fa-plus-square " id ="agregarHorario"></i><i class="far fa-minus-square" id ="eliminarHorario"></i>
+				</div>
+				<div class="col-4"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-4"></div>
+				<div class="col-4">
+					
+					<table  id="horario" class="table-sm table-bordered">		
+			
+			
+						<tr>
+							<td><label>Fecha</label></td>
+							<td><label>Hora Inicio</label></td>
+							<td><label>Hora Final</label></td>
+							<td><label>Lugar</label></td>
+						</tr>
+						<tr id="tablaHorario">
+							<td><input type="date"  name="fecha[]"></td>
+							<td><input type="time"  name="horarioI[]"></td>
+							<td><input type="time"  name="horarioF[]"></td>
+							<td><select name="lugar[]"><?php foreach ($res_lugar as $key){echo "<option value=". $key['id_lugar'] .">" . $key['nombre_lugar']. "</option>";}?></select>
+							
+						</tr>
+					</table>
+					
+
+				</div>
+				<div class="col-4"></div>	
+			</div>
+
+			
+			<div class="row mt-2">
+					<div class="col-5"></div>
+					<div class="col-2">
+						<input type="submit" value="Enviar">
+						<input type="reset" value="Limpiar">
+					</div>
+					<div class="col-5"></div>
 			</div>
 
 
+			<div class="row mt-3">
+				<div class="col-4"></div>
+				<div class="col-4">
+					
+					<?php if(!empty($errores)):?>
+							<ul class="	alert-danger">
+								<?php echo $errores; ?>
+							</ul>
+
+					<?php endif; ?>
+
+
+				</div>
+				<div class="col-4"></div>				 <!--Mensajes de error-->
+			</div>
+			
+
+			
 			
 
 		</div>
