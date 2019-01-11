@@ -300,13 +300,8 @@ header("Content-Type: text/html;charset=utf-8");
 
 
 				</div>
-				<div class="col-4"></div>				 <!--Mensajes de error-->
+				<div class="col-4"></div>		
 			</div>
-			
-
-			
-			
-
 		</div>
 	
 	

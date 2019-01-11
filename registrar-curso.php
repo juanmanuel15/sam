@@ -32,7 +32,7 @@
 		$errores .= "<li>$dirigido</li>";
 		$errores .= "<li>$nombre_grupo_invitado</li>";*/
 
-		if (is_array($hora_inicial)){
+		if (is_array($hora_inicial) AND is_array($hora_final) AND is_array($fecha) ){
 
 			foreach ($hora_inicial as $key) {
 				if($key == '')
